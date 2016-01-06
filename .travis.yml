@@ -5,4 +5,10 @@ script:
   - sh first-setup.sh --modules=all > /dev/null
   - source tex/setuptex
   - context ../Hello-world.tex
-  
+
+addons:
+  artifacts: true
+  s3_region: "eu-west-1"  
+  paths:
+    - $HOME/Hello-world.pdf
+

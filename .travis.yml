@@ -13,4 +13,4 @@ addons:
     paths:
       - $(ls *.pdf)
     s3_region: "eu-west-1"
-    target_paths: "current"
+    target_paths: $TRAVIS_BRANCH

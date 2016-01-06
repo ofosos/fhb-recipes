@@ -10,5 +10,5 @@ addons:
   artifacts: true
   s3_region: "eu-west-1"  
   paths:
-    - $HOME/Hello-world.pdf
+    - $(ls $HOME/*.pdf)
 

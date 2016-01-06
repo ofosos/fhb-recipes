@@ -11,5 +11,5 @@ addons:
   artifacts:
     debug: true
     paths:
-      - $(ls $HOME/ofosos/fhb-recipes/*.pdf)
+      - $(ls *.pdf)
   s3_region: "eu-west-1"

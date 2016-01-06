@@ -8,7 +8,6 @@ script:
 
 addons:
   artifacts: true
-  s3_region: "eu-west-1"  
-  paths:
-    - $(ls $HOME/*.pdf)
-
+    paths:
+      - $(ls $HOME/*.pdf)
+  s3_region: "eu-west-1"

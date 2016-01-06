@@ -1,0 +1,8 @@
+script:
+  mkdir context
+  cd context
+  wget http://minimals.contextgarden.net/setup/first-setup.sh
+  sh first-setup.sh --modules=all
+  source tex/setuptex
+  context ../Hello-world.tex
+  

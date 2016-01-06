@@ -10,5 +10,5 @@ script:
 addons:
   artifacts:
     paths:
-      - $(ls $HOME/*.pdf)
+      - $(ls $HOME/fhb-recipes/*.pdf)
   s3_region: "eu-west-1"

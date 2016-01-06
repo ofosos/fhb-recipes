@@ -4,7 +4,8 @@ script:
   - wget http://minimals.contextgarden.net/setup/first-setup.sh
   - sh first-setup.sh --modules=all > /dev/null
   - source tex/setuptex
-  - context ../Hello-world.tex
+  - cd $HOME
+  - context Hello-world.tex
 
 addons:
   artifacts:

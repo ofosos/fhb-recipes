@@ -1,0 +1,206 @@
+
+\setuppapersize[A4]
+
+\usemodule[microtype]
+
+\definefontfamily [bfont] [serif] [Maiola] [onum=yes,liga=1yes,kern=yes]
+\definefontfamily [bfont] [mono] [Source Code Pro] [scaled=0.6]
+
+\definefallbackfamily [bfont] [math] [Maiola] [math:lowercaseitalic] [force=yes]
+\definefallbackfamily [bfont] [math] [Maiola] [math:digitsnormal]    [force=yes]
+\definefontfamily     [bfont] [math] [TeX Gyre Pagella Math]
+
+\definefontfamily [hfont] [serif] [Maiola] [onum=yes,liga=yes,case=yes,kern=yes,dlig=yes]
+
+\definefontfamily [sufont] [serif] [Maiola Book] [onum=yes,sups=yes]
+
+\definefontfamily [tfont] [serif] [Maiola Book] [tnum=yes,zero=yes]
+
+\setupbodyfont [bfont,10pt]
+
+\setupfontsynonym [Serif] [handling=pure]
+
+\definefontfeature	[default][default][protrusion=quality]
+
+\definefont[secfont][\classfont{hfont}{SerifCaps} at 16pt]
+\setuphead[section][style=secfont]
+
+\definefont[titfont][\classfont{hfont}{SerifCaps} at 24pt]
+\setuphead[title][style=titfont]
+
+\setuplayout[backspace=20mm,
+    width=160mm,
+    topspace=20mm,
+    header=0mm, 
+    footer=0mm,
+    height=250mm]
+
+\setupwhitespace[medium]
+\setuphead[section][number=no]
+\setuphead[title][page=no]
+
+%\startcolumns[n=2]
+
+\chardef\characteralignmentmode=2
+
+\starttext
+
+\title{Tempeh Workshop}
+
+\section{Making Tempeh}
+
+Tempeh is a fermented soy bean product originating in Indonesia. To make tempeh, soak the soy beans in water for half a day. Then pressure cook the beans. Make sure the beans are not overcooked. They should be soft to squeeze, but not mushy. After that, clean the soy beans so most husks are removed. Then add the tempeh starter culture mixed with rice flour and some vinegar. The tempeh will be ready after two to three days of fermentation.
+
+\blank[1*line]
+
+When fermenting the beans, a plastic bag is preferred. Punctuate the bag with a sharp knife or pin at 2cm intervals, so air can reach the tempeh. The preferred fermentation temperature is 38\,°C, but a temperature above 25\,°C will suffice.
+
+\blank[1*line]
+
+\bTABLE
+
+\setupTABLE[c][2,3][alignmentcharacter={.},aligncharacter=yes,align=middle]
+\setupTABLE[c][each][frame=off]
+\setupTABLE[r][1,2,3][topframe=on]
+\setupTABLE[r][last][bottomframe=on]
+
+\bTABLEhead
+
+\bTR
+\bTH {\setff{smallcaps}ingredient} \eTH
+\bTH {\setff{smallcaps}amount} \eTH
+\bTH {\setff{smallcaps}scaling} \eTH
+\bTH {\setff{smallcaps}procedure} \eTH
+\eTR
+
+\eTABLEhead
+
+
+\bTABLEbody
+\bTR
+  \bTC soy beans \eTC
+  \bTC 500\,g \eTC
+  \bTC 100\,\% \eTC
+  \bTC rinse the beans thouroughly with water, cover them with water and let them soak for 8 to 12 hours
+
+  pressure cook the beans for 20-30 minutes till they're soft. the beans should be easy to squeeze but not mushy
+
+  put the beans in a strainer and let them dry, possibly accelerating the process with a hair dryer
+  \eTC
+\eTR
+
+\bTR
+  \bTC vinegar \eTC
+  \bTC 5\,ml \eTC
+  \bTC 1\,\% \eTC
+  \bTC put the beans in a bowl and mix in the vinegar\eTC
+\eTR
+
+\bTR
+ \bTC tempeh starter \eTC
+ \bTC 3\,g \eTC
+ \bTC 0.6\,\%\eTC
+ \bTC[nr=2] in a seperate bowl mix tempeh starter with rice flour\eTC
+\eTR
+
+\bTR
+  \bTC rice flour \eTC
+  \bTC 6\,g \eTC
+  \bTC 1.2\,\% \eTC
+\eTR
+
+\bTR
+  \bTC \eTC
+  \bTC \eTC
+  \bTC \eTC
+  \bTC       evenly distribute the mixture throughout the beans
+      
+      spread the beans into a 3cm thick layer. pack in a punctuated plastic bag. incubate for 24-48 hours at > 25\,°C
+  \eTC
+\eTR
+
+\eTABLEbody
+
+\eTABLE
+
+After the fermentation is complete, white fungal mycelia will have grown around the beans. The formerly loose beans will now form a solid board.
+
+Tempeh should be stored refrigerated. It will keep for up to a week, when refrigerated at 4\,°C. The culture may begin to sporulate, which results in small black spots. These spots are fine to eat.
+
+\section{Cooking with Tempeh}
+
+In most cases tempeh will be marinated like meat. You can choose your own marinade, but we provide a simple one below.
+
+\blank[1*line]
+
+\bTABLE
+
+\setupTABLE[c][2,3][alignmentcharacter={.},aligncharacter=yes,align=middle]
+\setupTABLE[c][each][frame=off]
+\setupTABLE[r][1,2][topframe=on]
+\setupTABLE[r][last][bottomframe=on]
+%\setupTABLE[c][last][bottomframe=on]
+
+\bTABLEhead
+
+\bTR
+\bTH {\setff{smallcaps}ingredient} \eTH
+\bTH {\setff{smallcaps}amount} \eTH
+\bTH {\setff{smallcaps}scaling} \eTH
+\bTH {\setff{smallcaps}procedure} \eTH
+\eTR
+
+\eTABLEhead
+
+
+\bTABLEbody
+\bTR
+  \bTC soy sauce \eTC
+  \bTC 10\,ml \eTC
+  \bTC 18\,\% \eTC
+  \bTC[nr=4] mix all ingredients until the sugar is dissolved \eTC
+\eTR
+
+\bTR
+  \bTC light brown sugar \eTC
+  \bTC 20\,g \eTC
+  \bTC 36\,\% \eTC
+\eTR
+
+\bTR
+  \bTC ground ginger \eTC
+  \bTC 20\,g \eTC
+  \bTC 36\,\% \eTC
+\eTR
+
+\bTR
+  \bTC citrus juice \eTC
+  \bTC 5\,ml \eTC
+  \bTC 10\,\% \eTC
+\eTR
+
+\bTR
+  \bTC tempeh \eTC
+  \bTC ?? \eTC
+  \bTC ?? \eTC
+  \bTC add the marinade to the tempeh, submerging it
+
+       let the tempeh marinate for a day
+  \eTC
+\eTR
+
+\bTR
+  \bTC \eTC
+  \bTC \eTC
+  \bTC \eTC
+  \bTC transfer the tempeh and some of the marinade into a pan and fry for 10-15 minutes. serve warm, in a manner similar to meat or tofu\eTC
+\eTR
+
+\eTABLEbody
+\eTABLE
+
+
+
+Contributed by Algoldor and the Dancing Drops associated group.
+
+\stoptext

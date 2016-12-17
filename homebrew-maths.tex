@@ -1,0 +1,92 @@
+
+\setuppapersize[A4]
+
+\usemodule[microtype]
+
+\definefontfamily [bfont] [serif] [Maiola] [onum=yes,liga=1yes,kern=yes]
+\definefontfamily [bfont] [mono] [Source Code Pro] [scaled=0.6]
+
+\definefallbackfamily [bfont] [math] [Maiola] [math:lowercaseitalic] [force=yes]
+\definefallbackfamily [bfont] [math] [Maiola] [math:digitsnormal]    [force=yes]
+\definefontfamily     [bfont] [math] [TeX Gyre Pagella Math]
+
+\definefontfamily [hfont] [serif] [Maiola] [onum=yes,liga=yes,case=yes,kern=yes,dlig=yes]
+
+\definefontfamily [sufont] [serif] [Maiola Book] [onum=yes,sups=yes]
+
+\definefontfamily [tfont] [serif] [Maiola Book] [tnum=yes,zero=yes]
+
+\setupbodyfont [bfont,10pt]
+
+\setupfontsynonym [Serif] [handling=pure]
+
+\definefontfeature	[default][default][protrusion=quality]
+
+\definefont[secfont][\classfont{hfont}{SerifCaps} at 16pt]
+\setuphead[section][style=secfont]
+
+\definefont[titfont][\classfont{hfont}{SerifCaps} at 24pt]
+\setuphead[title][style=titfont]
+
+\setuplayout[backspace=20mm,
+    width=160mm,
+    topspace=20mm,
+    header=0mm, 
+    footer=0mm,
+    height=250mm]
+
+\setupwhitespace[medium]
+\setuphead[section][number=no]
+\setuphead[title][page=no]
+
+%\startcolumns[n=2]
+
+\chardef\characteralignmentmode=2
+
+\starttext
+
+\title{Homebrewing Recipe Maths}
+
+This handout provides some back of the envelope maths for quickly
+whipping up a recipe. This should also be useful, when scaling up or
+down a known recipe or substituting ingredients.
+
+\section{Degress Plato (°P) and Original gravity}
+
+Degress Plato (°P) is a measure of the extract (sugars and proteins) in the wort and the finished beer, a fluid with 1°P has by definition the same density as the same amount of water with 1\% by weight of saccharose. Original Gravity (OG) does the same but is a different unit. Generally OG measures the density of the fluid at 20°C in g/cm^3. To quickly convert an OG of 1.048 into °P, take the last three digits of the OG value and divide it by 4. In this case the result is 12°P. This approximation is reasonably correct, when homebrewing.
+
+\section{Calculating Original Gravity}
+
+We start out this calculation with a given set of proportions of malts. We'll use 80\% Pils malt and 20\% Munich malt. We also start out with a target volume of beer we want to create, which will be 20l of beer. Based on this we'll calculate how much malt to use to get to our target gravity of 1.048 (i.e. 12°P).
+
+Calculate the mass of the wort: $20l * 1.048g/cm^3 = 21kg$
+
+Now back to °P. We now have 21kg of wort, with a density of 12°P, multiply these together to get the amount of the extract (sugars) we need:
+$21kg * 12°P = 21kg * 12\% = 2.5kg$
+
+
+
+\section{Calculating beer color}
+
+\section{Bittering additions}
+
+Bittering in beer is actually hard to predict accurately. Instead of
+giving you a single formula, we'll give you a few coarse rules to
+calculate the impact of hop bittering in your beer.
+
+\section{Hop substitutions}
+
+Substituting one hop for a different hop is something you will be
+doing frequently. Either due to availability of a variety or due to
+different growth conditioin. Achieving the same bittering rate from
+two different hops is easy. Generally your recipe will call for a
+certain amount of hops at a certain alpha acid level (\% alpha acid,
+\%AA). So to substitute 60g of 12\%AA hops with a hop at 10\%AA, just
+use the rule of three $60g * 12 / 10 = 72g$, so we need 72g of 10\%AA
+hops to substitute.
+
+\blank[1*line]
+
+\blank[1*line]
+
+\stoptext

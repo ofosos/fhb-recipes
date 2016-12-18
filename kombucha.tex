@@ -1,0 +1,71 @@
+\setuppapersize[A4]
+
+\usemodule[microtype]
+
+\setupexternalfigures[location=local,directory=.,conversion=pdf] % lowres,prefix=lowres/]
+
+\definefontfamily [bfont] [serif] [Maiola] [onum=yes,liga=1yes,kern=yes]
+\definefontfamily [bfont] [mono] [Source Code Pro] [scaled=0.6]
+
+\definefallbackfamily [bfont] [math] [Maiola] [math:lowercaseitalic] [force=yes]
+\definefallbackfamily [bfont] [math] [Maiola] [math:digitsnormal]    [force=yes]
+\definefontfamily     [bfont] [math] [TeX Gyre Pagella Math]
+
+\definefontfamily [hfont] [serif] [Maiola] [onum=yes,liga=yes,case=yes,kern=yes,dlig=yes]
+
+\definefontfamily [sufont] [serif] [Maiola Book] [onum=yes,sups=yes]
+
+\definefontfamily [tfont] [serif] [Maiola Book] [tnum=yes,zero=yes]
+
+\setupbodyfont [bfont,10pt]
+
+\setupfontsynonym [Serif] [handling=pure]
+
+\definefontfeature	[default][default][protrusion=quality]
+
+\definefont[secfont][\classfont{hfont}{SerifCaps} at 16pt]
+\setuphead[section][style=secfont]
+
+\definefont[titfont][\classfont{hfont}{SerifCaps} at 24pt]
+\setuphead[title][style=titfont]
+
+\setuplayout[backspace=20mm,
+    width=160mm,
+    topspace=20mm,
+    header=0mm, 
+    footer=0mm,
+    height=250mm]
+
+\setupwhitespace[medium]
+\setuphead[section][number=no]
+\setuphead[title][page=no]
+
+%\startcolumns[n=2]
+
+\chardef\characteralignmentmode=2
+
+\starttext
+
+
+\definelayer[logo]
+
+\setlayer[logo][x=15cm,y=0cm]{\externalfigure[foodhackingbase-logo.svg][frame=off]}
+
+\flushlayer[logo]
+
+
+\title{Kombucha Brewing}
+
+\section{Kombucha Manual - Short Workshop Form}
+
+The kombucha culture (SCOBY) is likely to originate in Southeast Asia. To prepare a kombucha beverage you make strong black tea, sweeten it with sugar and add the kombucha mother, letting it ferment for one to two weeks. The fermentation is aerobic and develops well at temperatures between 15-25°C.
+
+The brew should be tasted regularly, starting at four days into the fermenation. Once it starts to get sour, you decide when to harvest it, depending on your flavour preference. If you like to add flavour to your drink, you should do so before the secondary fermentation, which makes the drink fizzy. However you can skip secondary fermentation too.
+
+
+\section{Secondary Fermentation}
+
+\section{Flavouring}
+
+
+\stoptext

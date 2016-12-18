@@ -1,0 +1,150 @@
+\setuppapersize[A4]
+
+\usemodule[microtype]
+
+\setupexternalfigures[location=local,directory=.,conversion=pdf] % lowres,prefix=lowres/]
+
+\definefontfamily [bfont] [serif] [Maiola] [onum=yes,liga=1yes,kern=yes]
+\definefontfamily [bfont] [mono] [Source Code Pro] [scaled=0.6]
+
+\definefallbackfamily [bfont] [math] [Maiola] [math:lowercaseitalic] [force=yes]
+\definefallbackfamily [bfont] [math] [Maiola] [math:digitsnormal]    [force=yes]
+\definefontfamily     [bfont] [math] [TeX Gyre Pagella Math]
+
+\definefontfamily [hfont] [serif] [Maiola] [onum=yes,liga=yes,case=yes,kern=yes,dlig=yes]
+
+\definefontfamily [sufont] [serif] [Maiola Book] [onum=yes,sups=yes]
+
+\definefontfamily [tfont] [serif] [Maiola Book] [tnum=yes,zero=yes]
+
+\setupbodyfont [bfont,10pt]
+
+\setupfontsynonym [Serif] [handling=pure]
+
+\definefontfeature	[default][default][protrusion=quality]
+
+\definefont[secfont][\classfont{hfont}{SerifCaps} at 16pt]
+\setuphead[section][style=secfont]
+
+\definefont[titfont][\classfont{hfont}{SerifCaps} at 24pt]
+\setuphead[title][style=titfont]
+
+\setuplayout[backspace=20mm,
+    width=160mm,
+    topspace=20mm,
+    header=0mm, 
+    footer=0mm,
+    height=250mm]
+
+\setupwhitespace[medium]
+\setuphead[section][number=no]
+\setuphead[title][page=no]
+
+%\startcolumns[n=2]
+
+\chardef\characteralignmentmode=2
+
+\starttext
+
+
+\definelayer[logo]
+
+\setlayer[logo][x=15cm,y=0cm]{\externalfigure[foodhackingbase-logo.svg][frame=off]}
+
+\flushlayer[logo]
+
+
+\title{Beer Brewing for Beginners}
+
+\section{33c3 Pale Ale}
+
+\bTABLE
+
+\setupTABLE[c][2,3][alignmentcharacter={.},aligncharacter=yes,align=middle]
+\setupTABLE[c][each][frame=off]
+\setupTABLE[r][1,2,3][topframe=on]
+\setupTABLE[r][last][bottomframe=on]
+
+\bTABLEhead
+
+\bTR
+\bTH {\setff{smallcaps}ingredient} \eTH
+\bTH {\setff{smallcaps}amount} \eTH
+\bTH {\setff{smallcaps}scaling} \eTH
+\bTH {\setff{smallcaps}purpose} \eTH
+\eTR
+
+\eTABLEhead
+
+
+\bTABLEbody
+\bTR
+  \bTC pale ale malt \eTC
+  \bTC 2.5\,kg \eTC
+  \bTC 100\,\% \eTC
+  \bTC the base malt, providing most of the fermentable sugars and some flavour
+  \eTC
+\eTR
+
+\bTR
+  \bTC Caramunich \eTC
+  \bTC 0.125\,kg \eTC
+  \bTC 5\,\% \eTC
+  \bTC a caramel malt, darkening color and anhancing the mal impression of the beer
+  \eTC
+\eTR
+
+\eTABLEbody
+
+\eTABLE
+
+\blank[1*line]
+
+{\bf Mash Schedule}: 45 minutes at 67°C
+
+{\bf Boiling Time}: 60 minutes
+
+{\bf Bittering Hop Addition}: 30g German Cascade, 7\,\%AA @60 minutes.
+
+{\bf Finishing Hop Addition}: 30g German Cascade, 7\,\%AA @2 minutes.
+
+{\bf Original Gravity}: 12°P (1.048 SG)
+
+{\bf Fermentation}: Fermentis US-05 at 18-20\,°C for 1 week.
+
+{\bf Comments}: Investigate whether you want to dry hop this beer during fermentation.
+
+\section{On Brew Day}
+
+You need: 1 larget pot (approx. 14\,l), a large spoon or ladle for stirring, a lautering aid (Läuterhexe or false bottom) and a corresponding lauter/mash tun (temperature controlled), a hydrometer.
+
+Have all ingredients and equipment ready. We will use two big pots: the mash tun, which double as a lautering tun and the boiling vessel. Both need to be drained from their contents and both need to be heated. The mash and lauter tun, will rest well below boiling temperature, the boiling pot only needs to heat our wort to boiling temperatur. Be careful when handling boiling liquids.
+
+{\bf Mashing and Lautering}
+
+\startitemize[n,fit][start=1,stopper={.\space}]
+\item place the lautering aid in the mash tun
+\item add 12\,l water to the mash tun and heat the water to to the mashing temperatur
+\item dough in the malts, and let rest for 45 minutes at the defined temperature
+\item check conversion of the malts, by tasting a small sample of wort, it should taste sweet
+\item adjust the temperature of the mash to to 78\,°C, the mash off temperature, and let it sit at that temperature for 15 minutes
+\item switch off the heat, open the mash tuns valve, draining the vorlauf into a container until it runs clear, recycle the vorlauf into the mash tun, while the remaining wort drains to the boiling vessel
+\stopitemize
+
+{\bf Hop boiling}
+
+\startitemize[n,fit][start=1,stopper={.\space}]
+\item once all wort has drained, start heating the boiling vessel. let the wort come to a full rolling boil, letting it boil for 15 minutes for the hot break to form
+\item add the 60 minutes hop addition, this is the bittering addition
+\item continue to boil for 58 minutes, carefully watching, that it doesn't boil over
+\item add the finishing hop addition to the boiling vessel, letting it boil for two minutes
+\item turn off the heat, after the entire setup has been boiling for 75 minutes. let it sit for 15 minutes for the hot break to drop out, whirlpool it
+\stopitemize
+
+Transfer to fermentation vessel, cool to 20\,°C, check the specific gravity with a hydrometer and pitch yeast. Let it ferment for one week. Fill into sanitized bottles, add priming drops, seal the bottles and then let it bottle condition for another two weeks.
+
+\blank[1*line]
+
+Contributed by Ofosos and Hendrik.
+
+\stoptext

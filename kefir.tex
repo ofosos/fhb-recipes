@@ -1,0 +1,128 @@
+
+\setuppapersize[A4]
+
+\usemodule[microtype]
+
+\definefontfamily [bfont] [serif] [Maiola] [onum=yes,liga=1yes,kern=yes]
+\definefontfamily [bfont] [mono] [Source Code Pro] [scaled=0.6]
+
+\definefallbackfamily [bfont] [math] [Maiola] [math:lowercaseitalic] [force=yes]
+\definefallbackfamily [bfont] [math] [Maiola] [math:digitsnormal]    [force=yes]
+\definefontfamily     [bfont] [math] [TeX Gyre Pagella Math]
+
+\definefontfamily [hfont] [serif] [Maiola] [onum=yes,liga=yes,case=yes,kern=yes,dlig=yes]
+
+\definefontfamily [sufont] [serif] [Maiola Book] [onum=yes,sups=yes]
+
+\definefontfamily [tfont] [serif] [Maiola Book] [tnum=yes,zero=yes]
+
+\setupbodyfont [bfont,10pt]
+
+\setupfontsynonym [Serif] [handling=pure]
+
+\definefontfeature	[default][default][protrusion=quality]
+
+\definefont[secfont][\classfont{hfont}{SerifCaps} at 16pt]
+\setuphead[section][style=secfont]
+
+\definefont[titfont][\classfont{hfont}{SerifCaps} at 24pt]
+\setuphead[title][style=titfont]
+
+\setuplayout[backspace=20mm,
+    width=160mm,
+    topspace=20mm,
+    header=0mm, 
+    footer=0mm,
+    height=250mm]
+
+\setupwhitespace[medium]
+\setuphead[section][number=no]
+\setuphead[title][page=no]
+
+%\startcolumns[n=2]
+
+\chardef\characteralignmentmode=2
+
+\starttext
+
+\title{Kefir Workshop}
+
+\section{Kefir Manual for 1\,l of Culture}
+
+The milk kefir grain culture most likely originated in the Caucasus mountains. To ferment milk into kefir, use lukewarm whole-fat cow milk poured into a wide mouth jar, leaving a quarter of the volume empty. Add the kefir grains into it, close it and let it ferment. The process is anaerobic and progresses well at temperatures between 20-30°C, being ready for consumption in 1-3 days.
+
+\blank[1*line]
+
+\bTABLE
+
+\setupTABLE[c][2,3][alignmentcharacter={.},aligncharacter=yes,align=middle]
+\setupTABLE[c][each][frame=off]
+\setupTABLE[r][1,2,3][topframe=on]
+\setupTABLE[r][last][bottomframe=on]
+
+\bTABLEhead
+
+\bTR
+\bTH {\setff{smallcaps}ingredient} \eTH
+\bTH {\setff{smallcaps}amount} \eTH
+\bTH {\setff{smallcaps}scaling} \eTH
+\bTH {\setff{smallcaps}purpose} \eTH
+\eTR
+
+\eTABLEhead
+
+
+\bTABLEbody
+\bTR
+  \bTC milk \eTC
+  \bTC 1\,l \eTC
+  \bTC 100\,\% \eTC
+  \bTC fermentation substance
+  \eTC
+\eTR
+
+\bTR
+  \bTC milk kefir grains \eTC
+  \bTC 10\,g - 15\,g \eTC
+  \bTC 1\,\% - 5\,\% \eTC
+  \bTC active culture
+  \eTC
+\eTR
+
+\eTABLEbody
+
+\eTABLE
+
+\blank[1*line]
+
+To ferment the milk, a wide-mouth glass container is preferred. When fermenting the milk, leave a 20-30\,\% headspace in the container. It should seal tightly, since the fermentation is anaerobic.
+
+\startitemize[n,fit][start=1,stopper={.\space}]
+\item warm up the milk till is lukewarm and transfer it to a wide mouth glass container. cold milk can be used too but it slows down the start of the fermentation
+\item use your hands to find the grains in the previous ferment, they are generally floating on the top
+\item you may rinse them carefully under cold or lukewarm water, to remove milk coagulate
+\item transfer them to the fresh milk in the wide mouth container
+\item seal the container so no additional air gets in
+\stopitemize
+
+Observe the kefir for signs of coagulation and taste it regularly. When the flavour is to your liking remove the grains by hand and transfer them to a fresh batch of milk. Move the fermented kefir milk to the fridge, if not used immediately. Kefir can keep easily for weeks in the fridge, especially if the container is full, without excess air. The kefir can be thicker or more runny, sweeter or more sour, depending on the length, temperature of the fermentation and amount of grains.
+
+\section{Making Kefir Cheese}
+
+For a variety of cooking projects, having a thicker kefir cheese is handy. Use 1\,l of kefir milk for this preparation. You will need a large bowl, a kitchen strainer and cheesecloth.
+
+\startitemize[n,fit][start=1,stopper={.\space}]
+\item arrange the strainer on top of the bowl, placing the cheesecloth into the strainer
+\item fill the kefir milk into the cheesecloth and let it drain for a few to several hours, cover it in case flies could reach it
+\item once the kefir cheese has the desired consistency, transfer it to a container. keep it refridgerated, if not used immediately
+\stopitemize
+
+The runoff, kefir whey, may be used as a drink or can be used in probiotic beverages. Keep it refridgerated.
+
+Kefir cheese combined with fruits can be put in a blender. Let this mixture secondary ferment warmly for a few hours, before returning it to the refridgerator for a day or two. The result is a wonderfully effervescent, fruit flavoured kefir cheese dessert. To enhance the flavour and texture you can use high-fat cream, yielding a kefir product similar to ``greek style yogurt''.
+
+\blank[1*line]
+
+Contributed by Frantisek Algoldor Apfelbeck.
+
+\stoptext

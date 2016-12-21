@@ -1,0 +1,9 @@
+set -e
+
+export OSFONTDIR=~/.fonts
+
+context beer-brewing.tex
+context homebrew-maths.tex
+context kefir.tex
+context kombucha.tex
+context tempeh.tex
